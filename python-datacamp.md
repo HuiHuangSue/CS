@@ -165,6 +165,15 @@ Fer is a red convertible worth $60000.00.
 Jump is a blue van worth $10000.00.
 ```
 
+#### Dictionaries
+```
+for name, number in phonebook.items():
+    print("Phone number of %s is %d" % (name, number))
+del phonebook["John"] or phonebook.pop("John")
+```
+
+#### Modules & Packages
+
 
 
 
