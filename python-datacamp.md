@@ -3,8 +3,8 @@ https://docs.python.org/3/tutorial/appetite.html
 
 
 ### python 2 vs 3
-- 2: print not a function, so print "a"
-- 3: print is a function and must be invoked with print()
+- print in 2 not a function, so print "a"; in 3 print is a function and must be invoked with print()
+- range in 2 acts like xrange, which returns iterator instead of a new list. 
 
 ### standard
 - indentation -- tabs or 4 spaces
@@ -85,7 +85,11 @@ else
 ```
 
 #### Loops
-
+```
+for x in (range(5)) --> [0, 1, 2, 3, 4]
+>>> print(range(3,6)) --> [3, 4, 5]
+>>> print (range(3,8,2)) --> [3, 5, 7]
+```
 
 
 
