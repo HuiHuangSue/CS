@@ -12,7 +12,8 @@ https://docs.python.org/3/tutorial/appetite.html
 - define string with ' or ". " can include apostrophes ', \, unicode chars, carriage return. 
 
 ---------------------------------------------------
-Basic grammar
+### Basic grammar
+#### variables & types
 ```
 "I said " + ("Hey " * 2) + "Hey!"
 'I said Hey Hey Hey!'
@@ -26,9 +27,64 @@ print("Float: %f" % myfloat)
 print("String: %s" % mystring)
 print("Integer: %d" % myint)
 ```
+#### Lists
+```
+myList=[1,2,3]
+strlist = ["my". "name"]
+mylist.append(4)
+print(mylist[0])
+```
 
+#### Basic Operators
+```
+even_numbers = [2,4,6,8]
+odd_numbers = [1,3,5,7]
+all_numbers = odd_numbers + even_numbers // preserves order
+print(all_numbers)
+print([1,2,3] * 3) 
+len(list1)
+```
 
+#### String Formatting
+```
+print("%s is %d years old" % ("Sue", 21))
+mylist = [1,2,3]
+print("A list: %s" % mylist)
+%s - String (or any object with a string representation, like numbers)
+%d - Integers
+%f - Floating point numbers
+%.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.
+%x/%X - Integers in hex representation (lowercase/uppercase)
 
+data = ("John", "Doe", 53.44)
+format_string = "Hello %s %s. Your current balance is $%s."
+print(format_string % data)
+```
+
+#### Basic String Operations
+```
+astring = "Hello world!"
+print(astring.count("l")) string.upper(), astring.lower(), stringstartswith("He"), endswith("fdgf"), stringsplit(" ") --> list of Hello World 2 words
+print(astring.index("o") + len(astring))
+print(astring[3:7]) --> index 3 -- 6 --> lo w (-3 means "3rd character from the end")
+print(astring[3:7]) & print(astring[3:7:1]) same
+print(astring[3:7:2])
+print("The characters with odd index are '%s'" %s[1::2]) #(0-based indexing)
+print("The last five characters are '%s'" % s[-5:]) # 5th-from-last to end
+print(astring[::-1]) // reverse
+```
+
+#### Boolean
+```
+if "John" in ["John", "Bob"] and Non-empty-Object or 2 < 3
+    print "a"
+elif list1 is list2
+    print "no way as is matches instances"
+else
+    print "last"
+```
+
+#### Loops
 
 
 
