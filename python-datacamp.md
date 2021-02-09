@@ -187,15 +187,55 @@ bmi = np_weight / np_height ** 2
 bmi[bmi > 23]
 ```
 
-#### Panda Basics
+#### List
+```
+sentence = "the quick brown fox jumps over the lazy dog"
+words = sentence.split()
+word_lengths = [len(word) for word in words if word != "the"]
+```
+#### Multiple function arguments
+```
+def foo(first, second, third, *therest):
+    print("First: %s" % first)
+    print("Second: %s" % second)
+    print("Third: %s" % third)
+    print("And all the rest... %s" % list(therest))
+    
+def bar(first, second, third, **options):
+    if options.get("action") == "sum":
+        print("The sum is: %d" %(first + second + third))
 
+    if options.get("number") == "first":
+        return first
 
+result = bar(1, 2, 3, action = "sum", number = "first")
+print("Result: %d" %(result))
+```
+#### Regular expression 
+https://docs.python.org/3/library/re.html#regular-expression-syntax%22RE%20syntax
 
+#### Set
+```
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
 
+a.intersection(b) ==> reveerse order both set(['John'])
+a.union(b)
+a.symmetric_difference(b) //reverse order both set(['Jill', 'Jake', 'Eric']);  only on one set
+a.difference(b) // only in one and not the other VS b.difference(a)
+set(['Jake', 'Eric'])
+set(['Jill'])
+```
 
+#### Partial
+```
+from functools import partial
+def func(u,v,w,x):
+    return u*4 + v*3 + w*2 + x
 
-
-
+p = partial(func,5,6,7)
+print(p(8))
+```
 ------------------------------------------------
 #### Ways to take control of same line/next line/next page:
 ```
