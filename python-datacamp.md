@@ -236,6 +236,36 @@ def func(u,v,w,x):
 p = partial(func,5,6,7)
 print(p(8))
 ```
+
+```
+# Python 3
+
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [1,2,3,4,5]
+
+results = list(map(lambda x, y: (x, y), my_strings, my_numbers))
+
+print(results)
+[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5)]
+---------------------------------------
+dromes = ("demigod", "rewire", "madam", "freer", "anutforajaroftuna", "kiosk")
+
+palindromes = list(filter(lambda word: word == word[::-1], dromes))
+
+print(palindromes)
+-------------------------------------------------------
+# Python 3
+from functools import reduce
+
+numbers = [3, 4, 6, 9, 34, 12]
+
+def custom_sum(first, second):
+    return first + second
+
+result = reduce(custom_sum, numbers)  --> 68
+result = reduce(custom_sum, numbers, 10) // initially use 10 as first argument to custom_sum. ---> 78
+print(result)
+```
 ------------------------------------------------
 #### Ways to take control of same line/next line/next page:
 ```
